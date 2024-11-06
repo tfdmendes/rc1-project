@@ -1,0 +1,7 @@
+Nov 06 14:26:02.144 HYPERVISOR: Release 0.2.23-amd64/Darwin (tag 2023010200)
+Nov 06 14:26:02.145 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 60467.
+Nov 06 14:26:02.152 HYPERVISOR: exec_cmd: hypervisor version 
+Nov 06 14:26:02.152 HYPERVISOR: exec_cmd: hypervisor working_dir /Users/tiago/Documents/Repositories/rc1-project/horoscope_inc/horoscope/project-files/dynamips 
+Nov 06 14:26:02.152 GENERAL: working_dir=/Users/tiago/Documents/Repositories/rc1-project/horoscope_inc/horoscope/project-files/dynamips
+Nov 06 14:26:02.153 HYPERVISOR: exec_cmd: ethsw create Switch1 
+Nov 06 14:26:05.887 HYPERVISOR: exec_cmd: ethsw rename Switch1 SW3 
