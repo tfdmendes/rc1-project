@@ -598,7 +598,7 @@
                 "template_id": "4e8b39d4-b685-45ba-affc-608c4e32b76d",
                 "width": 66,
                 "x": 138,
-                "y": -91,
+                "y": -90,
                 "z": 1
             },
             {
@@ -625,9 +625,10 @@
                 "properties": {
                     "ports_mapping": [
                         {
+                            "ethertype": "",
                             "name": "Ethernet0",
                             "port_number": 0,
-                            "type": "access",
+                            "type": "dot1q",
                             "vlan": 1
                         },
                         {
