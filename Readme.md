@@ -10,7 +10,7 @@
    - [Virtual Interfaces Router](#virtual-interfaces-router)
 3. **[NAT/PAT Configuration](#natpat-config)**
 4. **[DHCP Configuration](#dhcp)**
-
+5. **[IPv6 Configuration](#ipv6)**
 
 # USEFUL COMMANDS <a name="useful-commands"></a>
 **The order of most commands is relevant!**
@@ -19,26 +19,34 @@
 ```sh
 SW> show ip route					# Shows the routing table
 SW> show ipif						# Shows the ip address
-SW> show fdb						# Shows the switching table
 SW> show vlan-switch					# Shows the vlan table
 SW> show mac-address-table				# Shows the mac address table
+
+SW(config)> ip route <network> <mask> <gateway>		# Creates an ip route to  <network>
+							# with such <mask> through <gateway>
 ```
 ESW L3 Switch-Routers general mandatory commands:
 ```sh
 SW> ip routing						# Allows switch to perform L3 functions
 SW> ip subnet-zero 					# Allows the use of subnet zero
-SW> ipv6 unicast-routing 				# Enables IPv6 Routing on the switch 
+SW> ipv6 unicast-routing 				# Enables IPv6 Routing on the switch
 ```
 
 ## Router <a name="router"></a>
 ```sh
 R> show ip route 					# Show routing table
 R> show interfaces 					# Details of each interface
-R(config)> service dhcp 				# Enables the DHCP service 
+R(config)> service dhcp 				# Enables the DHCP service
+R(config)> ip route <network> <mask> <gateway>		# Creates an ip route to  <network>
+							# with such <mask> through <gateway>
 
 ### NAT/PAT ###
 R> show ip nat translations 				# Shows the NAT Table
 R> show ip nat statistics  				# Shows the NAT statistics
+
+### IPv6 ###
+R> show ipv6 interface 					# Detailed IPv6 configuration information for all interfaces
+R> show ipv6 interface brief 				# Summary of IPv6 interface information
 ```
 
 
@@ -108,10 +116,32 @@ show ip dhcp binding 					# Addresses given to the different hardware
 Configure the DHCP Server
 ```sh
 R(config)> service dhcp 				# Enables DHCP service
-R(config)> ip dhcp excluded-address <addr> <addr> 	# Interval of excluded addresses from the DHCP scope (x to y)
+R(config)> ip dhcp excluded address <addr> <addr> 	# Interval of excluded addresses from the DHCP scope (x to y)
 R(config)> ip dhcp pool <x> 				# Creates DHCP Pool number <x>
 R(dhcp-config)> network <addr> <mask>			# Mask and Subnet Mask linked to the DHCP Pool
 R(dhcp-config)> default-router <addr> 			# Gateway
+```
 
+#IPv6 	<a name="ipv6"></a>
+
+```sh
+R(config)> ipv6 unicast-routing 			# Enables IPv6 routing on the router
+R(config)> interface <int> 				# Selects the interface to be configured
+R(config-if)> ipv6 enable				# Enables IPv6 on the selected interface
+R(config-if)> no shutdown 				# Activates the interface
+
+### Adding Specific IPv6 Addresses ###
+R(config)> interface <int> 				# Selects the interface to be configured
+R(config-if)> ipv6 address 2001:A:1:1::100/64 		# Assigns IPv6 addr to selected interface
+R(config-if)> no shutdown 				# Activates the interface
+
+### Configuring an Address using EUI-64 ###
+R(config)> interface <int> 				# Selects the interface to be configured
+R(config-if)> ipv6 address 2001:A:1:2::/64 eui-64	# Configures an IPv6 Address for the interface using EUI-64
+R(config-if)> no shutdown 				# Activates the interface
+
+###Verification Commands###
+R> show ipv6 interface 					# Detailed IPv6 configuration information for all interfaces
+R> show ipv6 interface brief 				# Summary of IPv6 interface information
 
 ```
