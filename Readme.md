@@ -17,7 +17,7 @@
 
 ## ESW3 <a name="esw3"></a>
 ```sh
-SW> show iproute					# Shows the default gateway
+SW> show ip route					# Shows the routing table
 SW> show ipif						# Shows the ip address
 SW> show fdb						# Shows the switching table
 SW> show vlan-switch					# Shows the vlan table
