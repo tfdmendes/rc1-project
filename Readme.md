@@ -15,9 +15,15 @@
 # USEFUL COMMANDS <a name="useful-commands"></a>
 **The order of most commands is relevant!**
 
+To "undo" a command, or to simply delete something just attach the `no` prefix to the command
+```sh
+R(config-if)> no ipv6 address 2001:A:1:1::100/64 	# Undo's the assignment of IPv6 addr
+```
+
 ## ESW3 <a name="esw3"></a>
 ```sh
-SW> show ip route					# Shows the routing table
+SW> show ip route					# Shows the IPv4 routing table
+SW> show ipv6 route 					# Shows the IPv6 routing Table
 SW> show ipif						# Shows the ip address
 SW> show vlan-switch					# Shows the vlan table
 SW> show mac-address-table				# Shows the mac address table
@@ -139,7 +145,7 @@ R(config)> interface <int> 				# Selects the interface to be configured
 R(config-if)> ipv6 address 2001:A:1:2::/64 eui-64	# Configures an IPv6 Address for the interface using EUI-64
 R(config-if)> no shutdown 				# Activates the interface
 
-###Verification Commands###
+### Verification Commands ###
 R> show ipv6 interface 					# Detailed IPv6 configuration information for all interfaces
 R> show ipv6 interface brief 				# Summary of IPv6 interface information
 
