@@ -17,21 +17,25 @@
 
 ## ESW3 <a name="esw3"></a>
 ```sh
-SW> show iproute					# Shows the default gateway
+SW> show ip route					# Shows the routing table
 SW> show ipif						# Shows the ip address
 SW> show vlan-switch					# Shows the vlan table
 SW> show mac-address-table				# Shows the mac address table
+
+SW(config)> ip route <network> <mask> <gateway>		# Creates an ip route to  <network>
+							# with such <mask> through <gateway>
 ```
 ESW L3 Switch-Routers general mandatory commands:
 ```sh
 SW> ip routing						# Allows switch to perform L3 functions
 SW> ip subnet-zero 					# Allows the use of subnet zero
-SW> ipv6 unicast-routing 				# Enables IPv6 Routing on the switch 
+SW> ipv6 unicast-routing 				# Enables IPv6 Routing on the switch
 ```
 
 ## Router <a name="router"></a>
 ```sh
 R> show ip route 					# Show routing table
+R> show interfaces 					# Details of each interface
 R(config)> service dhcp 				# Enables the DHCP service
 R(config)> ip route <network> <mask> <gateway>		# Creates an ip route to  <network>
 							# with such <mask> through <gateway>
@@ -102,14 +106,22 @@ R> end 							# Exit current configuration
 
 
 ## DHCP<a name="dhcp"/></a>
+To verify the configuration and status of the DHCP Server
+```sh
+show ip dhcp pool 					# Returns the configured DHCP Pools
+show ip dhcp server statistics 				# Statics of the DHCP Server (Num of address pools; 
+							# Num of DHCP Discovers; Offer;	Request; Acknowlodge etc)
+show ip dhcp binding 					# Addresses given to the different hardware
+```
+Configure the DHCP Server
 ```sh
 R(config)> service dhcp 				# Enables DHCP service
+R(config)> ip dhcp excluded address <addr> <addr> 	# Interval of excluded addresses from the DHCP scope (x to y)
 R(config)> ip dhcp pool <x> 				# Creates DHCP Pool number <x>
 R(dhcp-config)> network <addr> <mask>			# Mask and Subnet Mask linked to the DHCP Pool
 R(dhcp-config)> default-router <addr> 			# Gateway
-R(config)> ip dhcp excluded address <addr> <addr> 	# Interval of excluded addresses from the DHCP scope (x to y)
 ```
----
+
 #IPv6 	<a name="ipv6"></a>
 
 ```sh
