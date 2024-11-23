@@ -97,12 +97,20 @@ R> end 							# Exit current configuration
 
 
 ## DHCP<a name="dhcp"/></a>
+To verify the configuration and status of the DHCP Server
+```sh
+show ip dhcp pool 					# Returns the configured DHCP Pools
+show ip dhcp server statistics 				# Statics of the DHCP Server (Num of address pools; 
+							# Num of DHCP Discovers; Offer;	Request; Acknowlodge etc)
+show ip dhcp binding 					# Addresses given to the different hardware
+```
+Configure the DHCP Server
 ```sh
 R(config)> service dhcp 				# Enables DHCP service
+R(config)> ip dhcp excluded-address <addr> <addr> 	# Interval of excluded addresses from the DHCP scope (x to y)
 R(config)> ip dhcp pool <x> 				# Creates DHCP Pool number <x>
 R(dhcp-config)> network <addr> <mask>			# Mask and Subnet Mask linked to the DHCP Pool
 R(dhcp-config)> default-router <addr> 			# Gateway
-R(config)> ip dhcp excluded address <addr> <addr> 	# Interval of excluded addresses from the DHCP scope (x to y)
 
 
 ```
