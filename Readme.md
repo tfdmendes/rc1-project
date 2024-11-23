@@ -61,7 +61,6 @@ VPC> ip dhcp -x 					# Release the IPv4 Address Dynamically
 
 <div style="page-break-after: always;"></div>
 
-
 # VLAN CONFIGURATION <a name="vlan-config"></a>
 
 ## Configure ESW VLANs <a name="esw-vlans"/></a>
@@ -103,9 +102,9 @@ R> encapsulation dot1Q <vlanID>				# Tags the sub-interface for the specified VL
 R> ip address <addr> <mask> 				# Assigns the addr and mask to the sub-interface
 R> end 							# Exit current configuration
 ```
+---
 
-
-## DHCP<a name="dhcp"/></a>
+# DHCP<a name="dhcp"/></a>
 To verify the configuration and status of the DHCP Server
 ```sh
 show ip dhcp pool 					# Returns the configured DHCP Pools
@@ -121,8 +120,8 @@ R(config)> ip dhcp pool <x> 				# Creates DHCP Pool number <x>
 R(dhcp-config)> network <addr> <mask>			# Mask and Subnet Mask linked to the DHCP Pool
 R(dhcp-config)> default-router <addr> 			# Gateway
 ```
-
-#IPv6 	<a name="ipv6"></a>
+---
+# IPv6 	<a name="ipv6"></a>
 
 ```sh
 R(config)> ipv6 unicast-routing 			# Enables IPv6 routing on the router
