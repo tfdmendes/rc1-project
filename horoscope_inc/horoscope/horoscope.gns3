@@ -93,7 +93,7 @@
                             "rotation": 0,
                             "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
                             "text": "f1/15",
-                            "x": 51,
+                            "x": 53,
                             "y": -6
                         },
                         "node_id": "af8c1be1-c48f-4c7f-980a-3e2f1ddaf25b",
@@ -1380,5 +1380,5 @@
     "type": "topology",
     "variables": null,
     "version": "2.2.42",
-    "zoom": 100
+    "zoom": 106
 }
