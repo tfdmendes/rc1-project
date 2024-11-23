@@ -33,6 +33,7 @@ SW> ipv6 unicast-routing 				# Enables IPv6 Routing on the switch
 ## Router <a name="router"></a>
 ```sh
 R> show ip route 					# Show routing table
+R> show interfaces 					# Details of each interface
 R(config)> service dhcp 				# Enables the DHCP service 
 
 ### NAT/PAT ###
