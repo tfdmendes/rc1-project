@@ -1,48 +1,44 @@
 # TABLE OF CONTENTS
 1. **[Useful Commands](#useful-commands)**
-   - [ESW3](#esw3)
-   - [Router](#router)
    - [VPC](#vpc)
+   - [Router](#router)
+   - [ESW3](#esw3)
 2. **[VLAN Configuration](#vlan-config)**
    - [Configure ESW VLANs](#esw-vlans)
-   - [Set Switch Port to Trunk](#trunk)
+   - [Set Port to Trunk](#trunk)
    - [Configure IP to VLAN](#ip-to-vlan)
-   - [Virtual Interfaces Router](#virtual-interfaces-router)
+   - [Virtual Interfaces](#virtual-interfaces)
 3. **[NAT/PAT Configuration](#natpat-config)**
 4. **[DHCP Configuration](#dhcp)**
 5. **[IPv6 Configuration](#ipv6)**
 
+
 # USEFUL COMMANDS <a name="useful-commands"></a>
 **The order of most commands is relevant!**
 
-To "undo" a command, or to simply delete something just attach the `no` prefix to the command
+To "undo" a command, or to simply delete something just attach the `no` prefix
 ```sh
 R(config-if)> no ipv6 address 2001:A:1:1::100/64 	# Undo's the assignment of IPv6 addr
 ```
 
-## ESW3 <a name="esw3"></a>
+## VPC <a name="vpc"></a>
 ```sh
-SW> show ip route					# Shows the IPv4 routing table
-SW> show ipv6 route 					# Shows the IPv6 routing Table
-SW> show ipif						# Shows the ip address
-SW> show vlan-switch					# Shows the vlan table
-SW> show mac-address-table				# Shows the mac address table
+##### VPC Commands #####
+VPC> show 						# Shows VPC Interface details
+VPC> show ip						# Shows Address/MAC/Gateway/DNS ...
+VPC> ip <addr> <mask> <gateway>				# Configures VPC to <addr> <mask> <gateway>
 
-SW(config)> ip route <network> <mask> <gateway>		# Creates an ip route to  <network>
-							# with such <mask> through <gateway>
-```
-ESW L3 Switch-Routers general mandatory commands:
-```sh
-SW> ip routing						# Allows switch to perform L3 functions
-SW> ip subnet-zero 					# Allows the use of subnet zero
-SW> ipv6 unicast-routing 				# Enables IPv6 Routing on the switch
+### DHCP ###
+VPC> ip dhcp 						# Acquire IPv4 Address dynamically
+VPC> ip dhcp -r 					# Renew the IPv4 Address Dynamically
+VPC> ip dhcp -x 					# Release the IPv4 Address Dynamically
 ```
 
 ## Router <a name="router"></a>
 ```sh
+##### Router Commands #####
 R> show ip route 					# Show routing table
 R> show interfaces 					# Details of each interface
-R(config)> service dhcp 				# Enables the DHCP service
 R(config)> ip route <network> <mask> <gateway>		# Creates an ip route to  <network>
 							# with such <mask> through <gateway>
 
@@ -51,42 +47,78 @@ R> show ip nat translations 				# Shows the NAT Table
 R> show ip nat statistics  				# Shows the NAT statistics
 
 ### IPv6 ###
+R> show ipv6 route 
 R> show ipv6 interface 					# Detailed IPv6 configuration information for all interfaces
 R> show ipv6 interface brief 				# Summary of IPv6 interface information
+R> ipv6 route <network>/<mask> <gateway> 		# Creates an ip route to  <network>
+							# with such <mask> through <gateway>
+
+### General Mandatory Commands ###
+R(config)> service dhcp					# Enables DHCP
+R(config)> ip subnet zero				# Allows the use of subnet 0
+R(config)> ipv6 unicast-routing				# Enables IPv6 Routing
+
 ```
 
+## ESW <a name="esw3"></a>
 
-## VPC <a name="vpc"></a>
-```sh 
-VPC> ip dhcp 						# Acquire IPv4 Address dynamically
-VPC> ip dhcp -r 					# Renew the IPv4 Address Dynamically
-VPC> ip dhcp -x 					# Release the IPv4 Address Dynamically
+```sh
+##### Switch Layer 3 Commands #####
+SW> show run						# Shows configuration file
+SW> show ip route					# Shows the IPv4 routing table
+SW> show ipv6 route 					# Shows the IPv6 routing Table
+SW> show vlan-switch					# Shows the vlan table
+SW> show mac-address-table				# Shows the mac address table
+SW(config)> ip route <network> <mask> <gateway>		# Creates an ip route to  <network>
+							# with such <mask> through <gateway>
+SW(config)> ipv6 route <network>/<mask> <gateway> 	# Creates an ip route to  <network>
+							# with such <mask> through <gateway>
+
+### Configure interface/vlan with more than 2 Addrs ###
+SW> conf t
+SW(config)> int <interface>
+SW(config-if)> ip address <addr> <mask>
+SW(config-if)> ip adddress <addr> <mask> secondary
+
+### General Mandatory Commands ###
+SW(config)> ip routing					# Allows switch to perform L3 functions
+SW(config)> service dhcp				# Enables DHCP
+SW(config)> ip subnet-zero 				# Allows the use of subnet zero
+SW(config)> ipv6 unicast-routing 			# Enables IPv6 Routing 
 ```
-
 ---
 
 <div style="page-break-after: always;"></div>
 
 # VLAN CONFIGURATION <a name="vlan-config"></a>
-
-## Configure ESW VLANs <a name="esw-vlans"/></a>
-
+## Configure VLANs <a name="esw-vlans"/></a>
 ```sh
 ESW> vlan database					# Enter VLAN configuration mode
 ESW> vlan <vlanID>					# Create <vlanID>
 ESW> exit						# Exit vlan Database
-ESW> conf t						# Enter configuration mode
-ESW> interface range F1/y - z				# Selects the range of interfaces for configuration
+
+ESW(config)> ip routing					# Enable IP Routing
+ESW> interface range Fx/y - z				# Selects the range of interfaces for configuration
+# Choose one, either ↓ or ↑
+ESW> interface Fx/y					# Selects the interface
+ESW> switchport mode access				# Putting ports into access mode
 ESW> switchport acess vlan <vlanID>			# Assigns the selected ports to <vlanID>
 ESW> end						# Exit current configuration
 ESW> write						# Save running configuration
 ```
 
-## Set Switch port to trunk <a name="trunk"/></a>
+## Set  port to trunk <a name="trunk"/></a>
 Configures the interface as a trunk port to carry traffic for multiple VLANs using 802.1Q encapsulation
+
+**Importante Note:**
+- Ports on acess mode can only belong to one specific VLAN and the incoming and outgoing Ethernet
+frames **DO NOT** have **VLAN TAG**
+- Ports on trunk mode may input and output Ethernet Frames from different VLANs and those ethernet frames
+**SHOULD BE TAGGED**, as such:
 ```sh
 ESW> interface Fx/y 					# Selects the interface
 ESW> switchport mode trunk 				# Sets the selected port to trunk
+
 ```
 
 ## Configure IP to VLAN <a name="ip-to-vlan"/></a>
@@ -99,13 +131,18 @@ ESW> end 						# Exists configuration mode
 ESW> write 						# Saves configuration	
 ```
 
-## Virtual Interfaces Router <a name="virtual-interfaces-router"/></a>
+## Virtual Interfaces <a name="virtual-interfaces"/></a>
+Configure sub-interface to send and received tagged frames (`encapsulation dot1Q <vlanid>`) 
+
+It's possible to add more sub-interfaces to the same physical interface (e.g `F1/0.3`, `F1/0.450`). The ID
+of the interface (`0.3`, `0.450`) **doesn't** need to match the `<vlanID>`.
 ```sh
-R> interface Fx/y					# Selects interface Fx/y
-R> no shutdown       					# Enables selected interface
-R> interface Fx/y.z 					# Creates sub-interface Fx/y.z
-R> encapsulation dot1Q <vlanID>				# Tags the sub-interface for the specified VLAN using dot1Q
-R> ip address <addr> <mask> 				# Assigns the addr and mask to the sub-interface
+R(config)> interface Fx/y				# Selects interface Fx/y
+R(config)> no shutdown       				# Enables selected interface
+R(config)> interface Fx/y.z 				# Creates sub-interface Fx/y.z
+R(config-subif)> no shutdown 				# Enables selected interface
+R(config-subif)> encapsulation dot1Q <vlanID>		# Tags the sub-interface for the specified VLAN using dot1Q
+R(config-subif)> ip address <addr> <mask> 		# Assigns the addr and mask to the sub-interface
 R> end 							# Exit current configuration
 ```
 ---
