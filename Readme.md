@@ -9,6 +9,8 @@
    - [Configure IP to VLAN](#ip-to-vlan)
    - [Virtual Interfaces](#virtual-interfaces)
 3. **[NAT/PAT Configuration](#natpat-config)**
+   - [Dynamic NAT/PAT](#dynamic-natpat)
+   - [Static NAT/PAT](#static-natpat)
 4. **[DHCP Configuration](#dhcp)**
 5. **[IPv6 Configuration](#ipv6)**
 
@@ -144,6 +146,48 @@ R(config-subif)> no shutdown 				# Enables selected interface
 R(config-subif)> encapsulation dot1Q <vlanID>		# Tags the sub-interface for the specified VLAN using dot1Q
 R(config-subif)> ip address <addr> <mask> 		# Assigns the addr and mask to the sub-interface
 R> end 							# Exit current configuration
+```
+---
+# NAT/PAT Configuration<a name="natpat-config"/></a>
+
+## Dynamic NAT/PAT <a name="dynamic-natpat"/></a>
+To define a pool of addresses to be allocated by dynamic NAT process:
+```sh
+R(config)> ip nat pool <poolName> <start-IP> <end-IP> netmask <subnet-mask>
+```
+
+Creates an acess list to specify which IP addresses are eligible for NAT Translation:
+- `<listnum>` number of the list
+- `<addr>` network address to be eligible for NAT Translation
+- `<wildcard-mask>` host bits (e.g `0.0.0.255`)
+```sh
+R(config)> access-list <listNum> permit <addr> <wildcard-mask>
+```
+
+Establish the dynamic source translation, link the acess list `<listNum>` to the name of the NAT Pool `<poolName>`:
+- Add the option `overload` to enable PAT (NAT Overload)
+```sh
+R(config)> ip nat inside source list <listNum> pool <poolName> (overload)
+```
+
+```sh
+R(config)> int fx/y					# Router Interface on the private network
+R(config-if)> ip nat inside 				# Specifies interface to  be used by inside network hosts
+
+R(config)> int fx/y					# Router Interface on the public network
+R(config-if)> ip nat outsidem 				# Specifies interface to  be used by outside
+```
+```sh
+R> show ip nat translations 				# Shows the NAT Table
+R> show ip nat statistics  				# Shows the NAT statistics
+R> clear ip nat translation *				# Clear NAT Translation Table
+R> ip nat translation timeout x 			# Change NAT timeout to x seconds 
+```
+
+## Static NAT/PAT<a name="static-natpat"/></a>
+Static translation 
+```sh
+R(config)> ip nat inside source static <private addr> <public addr>
 ```
 ---
 
