@@ -1,0 +1,23 @@
+Cisco Router Simulation Platform (version 0.2.23-amd64/Darwin unstable)
+Copyright (c) 2005-2011 Christophe Fillot.
+Build date: Jan  2 2023 06:34:02
+
+Log file: writing to dynamips_i3_log.txt
+Console binding address set to localhost
+ILT: loaded table "mips64j" from cache.
+ILT: loaded table "mips64e" from cache.
+ILT: loaded table "ppc32j" from cache.
+ILT: loaded table "ppc32e" from cache.
+Hypervisor TCP control server started (IP 127.0.0.1 port 62025).
+NIO udp-eea7e7cc-0b37-478c-ab00-d6ceb8bd93b8: capturing to file '/Users/vancelos/Documents/Universidade/RC/rc1-project/Calendar Inc/project-files/captures/March_Ethernet0_to_Switch2_Ethernet2.pcap'
+NIO udp-d08db5b3-37db-4c44-ab89-2979d1d322fe: capturing to file '/Users/vancelos/Documents/Universidade/RC/rc1-project/Calendar Inc/project-files/captures/ESW1_FastEthernet115_to_Switch2_Ethernet0.pcap'
+NIO udp-d08db5b3-37db-4c44-ab89-2979d1d322fe: ending packet capture.
+NIO udp-d08db5b3-37db-4c44-ab89-2979d1d322fe: capturing to file '/Users/vancelos/Documents/Universidade/RC/rc1-project/Calendar Inc/project-files/captures/ESW1_FastEthernet115_to_Switch2_Ethernet0.pcap'
+NIO udp-eea7e7cc-0b37-478c-ab00-d6ceb8bd93b8: ending packet capture.
+NIO udp-d08db5b3-37db-4c44-ab89-2979d1d322fe: ending packet capture.
+NIO udp-d08db5b3-37db-4c44-ab89-2979d1d322fe: capturing to file '/Users/vancelos/Documents/Universidade/RC/rc1-project/Calendar Inc/project-files/captures/ESW1_FastEthernet115_to_Switch2_Ethernet0.pcap'
+Hypervisor: closing control sockets.
+Hypervisor: closing remote client connections.
+Shutdown in progress...
+NIO udp-d08db5b3-37db-4c44-ab89-2979d1d322fe: ending packet capture.
+Shutdown completed.
