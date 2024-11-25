@@ -1,9 +1,3 @@
-# This the configuration for June
-#
-# Uncomment the following line to enable DHCP
-# dhcp
-# or the line below to manually setup an IP address and subnet mask
-# ip 192.168.1.1 255.0.0.0
-#
-
 set pcname June
+ip 203.128.181.193 203.128.181.222 27
+ip 2002:a188:bc27:101:2050:79ff:fe66:6801/64
