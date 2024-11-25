@@ -1,0 +1,23 @@
+Cisco Router Simulation Platform (version 0.2.23-amd64/Darwin unstable)
+Copyright (c) 2005-2011 Christophe Fillot.
+Build date: Jan  2 2023 06:34:02
+
+Log file: writing to dynamips_i3_log.txt
+Console binding address set to 0.0.0.0
+ILT: loaded table "mips64j" from cache.
+ILT: loaded table "mips64e" from cache.
+ILT: loaded table "ppc32j" from cache.
+ILT: loaded table "ppc32e" from cache.
+Hypervisor TCP control server started (IP 127.0.0.1 port 50341).
+NIO udp-93ad2c45-1f45-4919-aca1-67b87209e4ac: capturing to file '/Users/tiago/Documents/Repositories/rc1-project/horoscope_inc/horoscope/project-files/captures/Switch1_Ethernet0_to_R1_FastEthernet20.pcap'
+NIO udp-93ad2c45-1f45-4919-aca1-67b87209e4ac: ending packet capture.
+NIO udp-93ad2c45-1f45-4919-aca1-67b87209e4ac: capturing to file '/Users/tiago/Documents/Repositories/rc1-project/horoscope_inc/horoscope/project-files/captures/Switch1_Ethernet0_to_R1_FastEthernet20.pcap'
+NIO udp-93ad2c45-1f45-4919-aca1-67b87209e4ac: ending packet capture.
+NIO udp-93ad2c45-1f45-4919-aca1-67b87209e4ac: capturing to file '/Users/tiago/Documents/Repositories/rc1-project/horoscope_inc/horoscope/project-files/captures/Switch1_Ethernet0_to_R1_FastEthernet20.pcap'
+NIO udp-93ad2c45-1f45-4919-aca1-67b87209e4ac: ending packet capture.
+NIO udp-93ad2c45-1f45-4919-aca1-67b87209e4ac: capturing to file '/Users/tiago/Documents/Repositories/rc1-project/horoscope_inc/horoscope/project-files/captures/Switch1_Ethernet0_to_R1_FastEthernet20.pcap'
+Hypervisor: closing control sockets.
+Hypervisor: closing remote client connections.
+Shutdown in progress...
+NIO udp-93ad2c45-1f45-4919-aca1-67b87209e4ac: ending packet capture.
+Shutdown completed.

@@ -1,0 +1,57 @@
+Nov 25 17:32:07.847 HYPERVISOR: Release 0.2.23-amd64/Darwin (tag 2023010200)
+Nov 25 17:32:07.848 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 50341.
+Nov 25 17:32:07.857 HYPERVISOR: exec_cmd: hypervisor version 
+Nov 25 17:32:07.857 HYPERVISOR: exec_cmd: hypervisor working_dir /Users/tiago/Documents/Repositories/rc1-project/horoscope_inc/horoscope/project-files/dynamips 
+Nov 25 17:32:07.857 GENERAL: working_dir=/Users/tiago/Documents/Repositories/rc1-project/horoscope_inc/horoscope/project-files/dynamips
+Nov 25 17:32:07.858 HYPERVISOR: exec_cmd: ethsw create Switch1 
+Nov 25 17:32:08.138 HYPERVISOR: exec_cmd: nio create_udp udp-93ad2c45-1f45-4919-aca1-67b87209e4ac 20000 127.0.0.1 20001 
+Nov 25 17:32:08.138 HYPERVISOR: exec_cmd: ethsw add_nio Switch1 udp-93ad2c45-1f45-4919-aca1-67b87209e4ac 
+Nov 25 17:32:08.145 HYPERVISOR: exec_cmd: ethsw set_dot1q_port Switch1 udp-93ad2c45-1f45-4919-aca1-67b87209e4ac 1 
+Nov 25 17:32:09.194 HYPERVISOR: exec_cmd: nio create_udp udp-fd275d59-8345-455f-806e-1f907f1510b2 20036 127.0.0.1 20037 
+Nov 25 17:32:09.194 HYPERVISOR: exec_cmd: ethsw add_nio Switch1 udp-fd275d59-8345-455f-806e-1f907f1510b2 
+Nov 25 17:32:09.207 HYPERVISOR: exec_cmd: ethsw set_access_port Switch1 udp-fd275d59-8345-455f-806e-1f907f1510b2 16 
+Nov 25 17:32:09.242 HYPERVISOR: exec_cmd: nio create_udp udp-bb9d7e42-f934-4843-958a-98d0a905703d 20038 127.0.0.1 20039 
+Nov 25 17:32:09.242 HYPERVISOR: exec_cmd: ethsw add_nio Switch1 udp-bb9d7e42-f934-4843-958a-98d0a905703d 
+Nov 25 17:32:09.256 HYPERVISOR: exec_cmd: ethsw set_access_port Switch1 udp-bb9d7e42-f934-4843-958a-98d0a905703d 16 
+Nov 25 17:32:09.292 HYPERVISOR: exec_cmd: nio create_udp udp-36b9c1d2-8f12-42c3-bd32-5a2dd55dcc0a 20040 127.0.0.1 20041 
+Nov 25 17:32:09.292 HYPERVISOR: exec_cmd: ethsw add_nio Switch1 udp-36b9c1d2-8f12-42c3-bd32-5a2dd55dcc0a 
+Nov 25 17:32:09.303 HYPERVISOR: exec_cmd: ethsw set_access_port Switch1 udp-36b9c1d2-8f12-42c3-bd32-5a2dd55dcc0a 16 
+Nov 25 17:32:09.339 HYPERVISOR: exec_cmd: nio create_udp udp-88af88dc-3ac3-4569-90b7-9f2b708f43fb 20042 127.0.0.1 20043 
+Nov 25 17:32:09.339 HYPERVISOR: exec_cmd: ethsw add_nio Switch1 udp-88af88dc-3ac3-4569-90b7-9f2b708f43fb 
+Nov 25 17:32:09.352 HYPERVISOR: exec_cmd: ethsw set_access_port Switch1 udp-88af88dc-3ac3-4569-90b7-9f2b708f43fb 14 
+Nov 25 17:32:09.388 HYPERVISOR: exec_cmd: nio create_udp udp-6400633d-4e23-4b04-bd8d-c4338bf9a6cb 20044 127.0.0.1 20045 
+Nov 25 17:32:09.388 HYPERVISOR: exec_cmd: ethsw add_nio Switch1 udp-6400633d-4e23-4b04-bd8d-c4338bf9a6cb 
+Nov 25 17:32:09.401 HYPERVISOR: exec_cmd: ethsw set_access_port Switch1 udp-6400633d-4e23-4b04-bd8d-c4338bf9a6cb 14 
+Nov 25 17:40:42.360 HYPERVISOR: exec_cmd: nio bind_filter udp-93ad2c45-1f45-4919-aca1-67b87209e4ac 2 capture 
+Nov 25 17:40:42.361 HYPERVISOR: exec_cmd: nio setup_filter udp-93ad2c45-1f45-4919-aca1-67b87209e4ac 2 en10mb /Users/tiago/Documents/Repositories/rc1-project/horoscope_inc/horoscope/project-files/captures/Switch1_Ethernet0_to_R1_FastEthernet20.pcap 
+Nov 25 17:54:26.565 HYPERVISOR: exec_cmd: ethsw set_dot1q_port Switch1 udp-93ad2c45-1f45-4919-aca1-67b87209e4ac 1 
+Nov 25 17:54:26.573 HYPERVISOR: exec_cmd: ethsw set_access_port Switch1 udp-6400633d-4e23-4b04-bd8d-c4338bf9a6cb 14 
+Nov 25 17:54:26.604 HYPERVISOR: exec_cmd: ethsw set_access_port Switch1 udp-88af88dc-3ac3-4569-90b7-9f2b708f43fb 14 
+Nov 25 17:54:26.631 HYPERVISOR: exec_cmd: ethsw set_access_port Switch1 udp-fd275d59-8345-455f-806e-1f907f1510b2 16 
+Nov 25 17:54:26.658 HYPERVISOR: exec_cmd: ethsw set_access_port Switch1 udp-bb9d7e42-f934-4843-958a-98d0a905703d 16 
+Nov 25 17:54:26.663 HYPERVISOR: exec_cmd: ethsw set_access_port Switch1 udp-36b9c1d2-8f12-42c3-bd32-5a2dd55dcc0a 16 
+Nov 25 17:54:26.857 HYPERVISOR: exec_cmd: ethsw set_dot1q_port Switch1 udp-93ad2c45-1f45-4919-aca1-67b87209e4ac 1 
+Nov 25 17:54:26.893 HYPERVISOR: exec_cmd: ethsw set_access_port Switch1 udp-6400633d-4e23-4b04-bd8d-c4338bf9a6cb 14 
+Nov 25 17:54:26.897 HYPERVISOR: exec_cmd: ethsw set_access_port Switch1 udp-88af88dc-3ac3-4569-90b7-9f2b708f43fb 14 
+Nov 25 17:54:26.922 HYPERVISOR: exec_cmd: ethsw set_access_port Switch1 udp-fd275d59-8345-455f-806e-1f907f1510b2 16 
+Nov 25 17:54:26.950 HYPERVISOR: exec_cmd: ethsw set_access_port Switch1 udp-bb9d7e42-f934-4843-958a-98d0a905703d 16 
+Nov 25 17:54:26.980 HYPERVISOR: exec_cmd: ethsw set_access_port Switch1 udp-36b9c1d2-8f12-42c3-bd32-5a2dd55dcc0a 16 
+Nov 25 17:54:27.495 HYPERVISOR: exec_cmd: ethsw set_dot1q_port Switch1 udp-93ad2c45-1f45-4919-aca1-67b87209e4ac 1 
+Nov 25 17:54:27.524 HYPERVISOR: exec_cmd: ethsw set_access_port Switch1 udp-6400633d-4e23-4b04-bd8d-c4338bf9a6cb 14 
+Nov 25 17:54:27.528 HYPERVISOR: exec_cmd: ethsw set_access_port Switch1 udp-88af88dc-3ac3-4569-90b7-9f2b708f43fb 14 
+Nov 25 17:54:27.605 HYPERVISOR: exec_cmd: ethsw set_access_port Switch1 udp-fd275d59-8345-455f-806e-1f907f1510b2 16 
+Nov 25 17:54:27.609 HYPERVISOR: exec_cmd: ethsw set_access_port Switch1 udp-bb9d7e42-f934-4843-958a-98d0a905703d 16 
+Nov 25 17:54:27.615 HYPERVISOR: exec_cmd: ethsw set_access_port Switch1 udp-36b9c1d2-8f12-42c3-bd32-5a2dd55dcc0a 16 
+Nov 25 17:58:30.360 HYPERVISOR: exec_cmd: nio unbind_filter udp-93ad2c45-1f45-4919-aca1-67b87209e4ac 2 
+Nov 25 17:58:37.849 HYPERVISOR: exec_cmd: nio bind_filter udp-93ad2c45-1f45-4919-aca1-67b87209e4ac 2 capture 
+Nov 25 17:58:37.849 HYPERVISOR: exec_cmd: nio setup_filter udp-93ad2c45-1f45-4919-aca1-67b87209e4ac 2 en10mb /Users/tiago/Documents/Repositories/rc1-project/horoscope_inc/horoscope/project-files/captures/Switch1_Ethernet0_to_R1_FastEthernet20.pcap 
+Nov 25 17:58:39.946 HYPERVISOR: exec_cmd: nio unbind_filter udp-93ad2c45-1f45-4919-aca1-67b87209e4ac 2 
+Nov 25 17:58:42.965 HYPERVISOR: exec_cmd: nio bind_filter udp-93ad2c45-1f45-4919-aca1-67b87209e4ac 2 capture 
+Nov 25 17:58:42.965 HYPERVISOR: exec_cmd: nio setup_filter udp-93ad2c45-1f45-4919-aca1-67b87209e4ac 2 en10mb /Users/tiago/Documents/Repositories/rc1-project/horoscope_inc/horoscope/project-files/captures/Switch1_Ethernet0_to_R1_FastEthernet20.pcap 
+Nov 25 18:54:00.978 HYPERVISOR: exec_cmd: nio unbind_filter udp-93ad2c45-1f45-4919-aca1-67b87209e4ac 2 
+Nov 25 18:54:04.922 HYPERVISOR: exec_cmd: nio bind_filter udp-93ad2c45-1f45-4919-aca1-67b87209e4ac 2 capture 
+Nov 25 18:54:04.923 HYPERVISOR: exec_cmd: nio setup_filter udp-93ad2c45-1f45-4919-aca1-67b87209e4ac 2 en10mb /Users/tiago/Documents/Repositories/rc1-project/horoscope_inc/horoscope/project-files/captures/Switch1_Ethernet0_to_R1_FastEthernet20.pcap 
+Nov 25 19:07:43.631 HYPERVISOR: exec_cmd: ethsw delete Switch1 
+Nov 25 19:07:43.760 HYPERVISOR: exec_cmd: hypervisor stop 
+Nov 25 19:07:43.847 HYPERVISOR: Stopped.
+Nov 25 19:07:43.847 GENERAL: reset done.
