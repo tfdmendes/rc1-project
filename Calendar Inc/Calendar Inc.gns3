@@ -57,7 +57,7 @@
                 "drawing_id": "c7831456-a527-4cdb-8a52-ad29f15adc42",
                 "locked": false,
                 "rotation": 0,
-                "svg": "<svg width=\"110\" height=\"24\"><text font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\" fill=\"#000000\" fill-opacity=\"1.0\">203.128.181.241</text></svg>",
+                "svg": "<svg width=\"96\" height=\"20\"><text font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\" fill=\"#000000\" fill-opacity=\"1.0\">203.128.181.241</text></svg>",
                 "x": 652,
                 "y": -429,
                 "z": 2
@@ -112,8 +112,8 @@
                 "locked": false,
                 "rotation": 0,
                 "svg": "<svg width=\"331\" height=\"761\"><rect width=\"331\" height=\"761\" fill=\"#ffffff\" fill-opacity=\"1.0\" stroke-width=\"2\" stroke=\"#000000\" /></svg>",
-                "x": -288,
-                "y": -455,
+                "x": -289,
+                "y": -456,
                 "z": 0
             },
             {
@@ -1609,7 +1609,7 @@
                 "symbol": ":/symbols/multilayer_switch.svg",
                 "template_id": "dbb22d43-78e0-491c-b074-6f84c785b763",
                 "width": 51,
-                "x": -32,
+                "x": -30,
                 "y": -93,
                 "z": 1
             },
@@ -1679,7 +1679,7 @@
                 "template_id": "4e8b39d4-b685-45ba-affc-608c4e32b76d",
                 "width": 66,
                 "x": 373,
-                "y": -89,
+                "y": -92,
                 "z": 1
             },
             {
@@ -1715,7 +1715,7 @@
                 "compute_id": "local",
                 "console": null,
                 "console_auto_start": false,
-                "console_type": null,
+                "console_type": "none",
                 "custom_adapters": [],
                 "first_port_name": null,
                 "height": 71,
