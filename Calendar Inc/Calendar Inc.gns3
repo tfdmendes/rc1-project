@@ -219,7 +219,7 @@
                 "drawing_id": "881ad6eb-183d-4747-8854-027dd496b8c8",
                 "locked": false,
                 "rotation": 0,
-                "svg": "<svg width=\"98\" height=\"21\"><text font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\" fill=\"#000000\" fill-opacity=\"1.0\">203.128.181.249</text></svg>",
+                "svg": "<svg width=\"98\" height=\"20\"><text font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\" fill=\"#000000\" fill-opacity=\"1.0\">203.128.181.249</text></svg>",
                 "x": -367,
                 "y": 178,
                 "z": 2
@@ -1839,6 +1839,16 @@
                             "type": "ethernet"
                         },
                         {
+                            "name": "en7",
+                            "special": false,
+                            "type": "ethernet"
+                        },
+                        {
+                            "name": "en8",
+                            "special": false,
+                            "type": "ethernet"
+                        },
+                        {
                             "name": "llw0",
                             "special": false,
                             "type": "ethernet"
@@ -1885,6 +1895,11 @@
                         },
                         {
                             "name": "utun7",
+                            "special": false,
+                            "type": "ethernet"
+                        },
+                        {
+                            "name": "utun8",
                             "special": false,
                             "type": "ethernet"
                         }
