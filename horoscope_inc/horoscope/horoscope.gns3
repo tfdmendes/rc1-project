@@ -301,7 +301,7 @@
                 "locked": false,
                 "rotation": 0,
                 "svg": "<svg width=\"79\" height=\"21\"><text font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\" fill=\"#000000\" fill-opacity=\"1.0\">172.29.82.33</text></svg>",
-                "x": -180,
+                "x": -181,
                 "y": -21,
                 "z": 2
             },
@@ -1909,6 +1909,6 @@
     },
     "type": "topology",
     "variables": null,
-    "version": "2.2.42",
+    "version": "2.2.45",
     "zoom": 75
 }
