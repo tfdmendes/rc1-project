@@ -75,7 +75,7 @@
                 "drawing_id": "6e8deb14-1027-4ba9-9e04-c2b2ac53586c",
                 "locked": false,
                 "rotation": 0,
-                "svg": "<svg width=\"93\" height=\"21\"><text font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\" fill=\"#000000\" fill-opacity=\"1.0\">P: 203.19.37.33</text></svg>",
+                "svg": "<svg width=\"93\" height=\"20\"><text font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\" fill=\"#000000\" fill-opacity=\"1.0\">P: 203.19.37.33</text></svg>",
                 "x": -18,
                 "y": -408,
                 "z": 2
@@ -84,7 +84,7 @@
                 "drawing_id": "f2841f8a-9703-4771-82bc-64373bcac606",
                 "locked": false,
                 "rotation": 0,
-                "svg": "<svg width=\"102\" height=\"21\"><text font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\" fill=\"#000000\" fill-opacity=\"1.0\">PV: 172.29.82.129</text></svg>",
+                "svg": "<svg width=\"102\" height=\"20\"><text font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\" fill=\"#000000\" fill-opacity=\"1.0\">PV: 172.29.82.129</text></svg>",
                 "x": 396,
                 "y": -305,
                 "z": 2
@@ -102,7 +102,7 @@
                 "drawing_id": "7d70f839-357c-4a61-a4ad-5f5ccd4f8e8f",
                 "locked": false,
                 "rotation": 0,
-                "svg": "<svg width=\"102\" height=\"21\"><text font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\" fill=\"#000000\" fill-opacity=\"1.0\">PV: 172.29.82.193</text></svg>",
+                "svg": "<svg width=\"102\" height=\"20\"><text font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\" fill=\"#000000\" fill-opacity=\"1.0\">PV: 172.29.82.193</text></svg>",
                 "x": 402,
                 "y": 83,
                 "z": 2
@@ -111,7 +111,7 @@
                 "drawing_id": "8a509c82-16f1-413f-ad2b-10cc9f1e4170",
                 "locked": false,
                 "rotation": 0,
-                "svg": "<svg width=\"77\" height=\"21\"><text font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\" fill=\"#000000\" fill-opacity=\"1.0\">DHCP Private</text></svg>",
+                "svg": "<svg width=\"77\" height=\"20\"><text font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\" fill=\"#000000\" fill-opacity=\"1.0\">DHCP Private</text></svg>",
                 "x": 397,
                 "y": 239,
                 "z": 2
@@ -120,7 +120,7 @@
                 "drawing_id": "79e2533d-8fc0-4f68-bc68-15ba0b439dee",
                 "locked": false,
                 "rotation": 0,
-                "svg": "<svg width=\"91\" height=\"21\"><text font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\" fill=\"#000000\" fill-opacity=\"1.0\">P: 203.19.37.97</text></svg>",
+                "svg": "<svg width=\"91\" height=\"20\"><text font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\" fill=\"#000000\" fill-opacity=\"1.0\">P: 203.19.37.97</text></svg>",
                 "x": 4,
                 "y": 288,
                 "z": 2
@@ -129,8 +129,8 @@
                 "drawing_id": "a835311e-a3e6-4514-8ca6-b08db4eb9a3f",
                 "locked": false,
                 "rotation": 0,
-                "svg": "<svg width=\"92\" height=\"21\"><text font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\" fill=\"#000000\" fill-opacity=\"1.0\">P: 203.19.37.81</text></svg>",
-                "x": -156,
+                "svg": "<svg width=\"92\" height=\"20\"><text font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\" fill=\"#000000\" fill-opacity=\"1.0\">P: 203.19.37.81</text></svg>",
+                "x": -154,
                 "y": 286,
                 "z": 2
             },
@@ -138,7 +138,7 @@
                 "drawing_id": "3f90079a-f053-4a43-bcba-3358b0ed403d",
                 "locked": false,
                 "rotation": 0,
-                "svg": "<svg width=\"92\" height=\"21\"><text font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\" fill=\"#000000\" fill-opacity=\"1.0\">P: 203.19.37.65</text></svg>",
+                "svg": "<svg width=\"92\" height=\"20\"><text font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\" fill=\"#000000\" fill-opacity=\"1.0\">P: 203.19.37.65</text></svg>",
                 "x": -339,
                 "y": 286,
                 "z": 2
@@ -1138,7 +1138,7 @@
                 "template_id": "19021f99-e36f-394d-b4a1-8aaa902ab9cc",
                 "width": 65,
                 "x": 409,
-                "y": -373,
+                "y": -374,
                 "z": 1
             },
             {
