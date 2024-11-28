@@ -1,0 +1,33 @@
+Nov 25 19:17:40.011 HYPERVISOR: Release 0.2.23-amd64/Darwin (tag 2023010200)
+Nov 25 19:17:40.012 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 62025.
+Nov 25 19:17:40.015 HYPERVISOR: exec_cmd: hypervisor version 
+Nov 25 19:17:40.015 HYPERVISOR: exec_cmd: hypervisor working_dir /Users/vancelos/Documents/Universidade/RC/rc1-project/Calendar Inc/project-files/dynamips 
+Nov 25 19:17:40.015 GENERAL: working_dir=/Users/vancelos/Documents/Universidade/RC/rc1-project/Calendar Inc/project-files/dynamips
+Nov 25 19:17:40.015 HYPERVISOR: exec_cmd: ethsw create Switch2 
+Nov 25 19:17:40.722 HYPERVISOR: exec_cmd: nio create_udp udp-fb94b207-2f3c-4db8-b36f-b49d63a69856 20014 127.0.0.1 20015 
+Nov 25 19:17:40.722 HYPERVISOR: exec_cmd: ethsw add_nio Switch2 udp-fb94b207-2f3c-4db8-b36f-b49d63a69856 
+Nov 25 19:17:40.729 HYPERVISOR: exec_cmd: ethsw set_access_port Switch2 udp-fb94b207-2f3c-4db8-b36f-b49d63a69856 4 
+Nov 25 19:17:40.866 HYPERVISOR: exec_cmd: nio create_udp udp-3c300805-ba5a-4719-bd81-7ccdb016fc2e 20025 127.0.0.1 20024 
+Nov 25 19:17:40.866 HYPERVISOR: exec_cmd: ethsw add_nio Switch2 udp-3c300805-ba5a-4719-bd81-7ccdb016fc2e 
+Nov 25 19:17:40.877 HYPERVISOR: exec_cmd: ethsw set_access_port Switch2 udp-3c300805-ba5a-4719-bd81-7ccdb016fc2e 2 
+Nov 25 19:17:40.899 HYPERVISOR: exec_cmd: nio create_udp udp-eea7e7cc-0b37-478c-ab00-d6ceb8bd93b8 20027 127.0.0.1 20026 
+Nov 25 19:17:40.900 HYPERVISOR: exec_cmd: ethsw add_nio Switch2 udp-eea7e7cc-0b37-478c-ab00-d6ceb8bd93b8 
+Nov 25 19:17:40.920 HYPERVISOR: exec_cmd: ethsw set_access_port Switch2 udp-eea7e7cc-0b37-478c-ab00-d6ceb8bd93b8 2 
+Nov 25 19:17:41.256 HYPERVISOR: exec_cmd: nio create_udp udp-d08db5b3-37db-4c44-ab89-2979d1d322fe 20039 127.0.0.1 20038 
+Nov 25 19:17:41.256 HYPERVISOR: exec_cmd: ethsw add_nio Switch2 udp-d08db5b3-37db-4c44-ab89-2979d1d322fe 
+Nov 25 19:17:41.262 HYPERVISOR: exec_cmd: ethsw set_dot1q_port Switch2 udp-d08db5b3-37db-4c44-ab89-2979d1d322fe 1 
+Nov 25 19:43:58.030 HYPERVISOR: exec_cmd: nio bind_filter udp-eea7e7cc-0b37-478c-ab00-d6ceb8bd93b8 2 capture 
+Nov 25 19:43:58.031 HYPERVISOR: exec_cmd: nio setup_filter udp-eea7e7cc-0b37-478c-ab00-d6ceb8bd93b8 2 en10mb /Users/vancelos/Documents/Universidade/RC/rc1-project/Calendar Inc/project-files/captures/March_Ethernet0_to_Switch2_Ethernet2.pcap 
+Nov 25 19:44:02.776 HYPERVISOR: exec_cmd: nio bind_filter udp-d08db5b3-37db-4c44-ab89-2979d1d322fe 2 capture 
+Nov 25 19:44:02.777 HYPERVISOR: exec_cmd: nio setup_filter udp-d08db5b3-37db-4c44-ab89-2979d1d322fe 2 en10mb /Users/vancelos/Documents/Universidade/RC/rc1-project/Calendar Inc/project-files/captures/ESW1_FastEthernet115_to_Switch2_Ethernet0.pcap 
+Nov 25 19:44:39.568 HYPERVISOR: exec_cmd: nio unbind_filter udp-d08db5b3-37db-4c44-ab89-2979d1d322fe 2 
+Nov 25 19:44:42.028 HYPERVISOR: exec_cmd: nio bind_filter udp-d08db5b3-37db-4c44-ab89-2979d1d322fe 2 capture 
+Nov 25 19:44:42.028 HYPERVISOR: exec_cmd: nio setup_filter udp-d08db5b3-37db-4c44-ab89-2979d1d322fe 2 en10mb /Users/vancelos/Documents/Universidade/RC/rc1-project/Calendar Inc/project-files/captures/ESW1_FastEthernet115_to_Switch2_Ethernet0.pcap 
+Nov 25 19:46:28.023 HYPERVISOR: exec_cmd: nio unbind_filter udp-eea7e7cc-0b37-478c-ab00-d6ceb8bd93b8 2 
+Nov 25 19:46:29.913 HYPERVISOR: exec_cmd: nio unbind_filter udp-d08db5b3-37db-4c44-ab89-2979d1d322fe 2 
+Nov 25 19:46:59.153 HYPERVISOR: exec_cmd: nio bind_filter udp-d08db5b3-37db-4c44-ab89-2979d1d322fe 2 capture 
+Nov 25 19:46:59.154 HYPERVISOR: exec_cmd: nio setup_filter udp-d08db5b3-37db-4c44-ab89-2979d1d322fe 2 en10mb /Users/vancelos/Documents/Universidade/RC/rc1-project/Calendar Inc/project-files/captures/ESW1_FastEthernet115_to_Switch2_Ethernet0.pcap 
+Nov 25 19:52:11.312 HYPERVISOR: exec_cmd: ethsw delete Switch2 
+Nov 25 19:52:11.383 HYPERVISOR: exec_cmd: hypervisor stop 
+Nov 25 19:52:11.696 HYPERVISOR: Stopped.
+Nov 25 19:52:11.696 GENERAL: reset done.
