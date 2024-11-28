@@ -102,7 +102,7 @@
                 "drawing_id": "003ddee2-431e-4179-ab12-871b8c242483",
                 "locked": false,
                 "rotation": 0,
-                "svg": "<svg width=\"110\" height=\"24\"><text font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\" fill=\"#000000\" fill-opacity=\"1.0\">203.128.181.129</text></svg>",
+                "svg": "<svg width=\"96\" height=\"20\"><text font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\" fill=\"#000000\" fill-opacity=\"1.0\">203.128.181.129</text></svg>",
                 "x": 257,
                 "y": -433,
                 "z": 2
@@ -1291,8 +1291,8 @@
                 "symbol": ":/symbols/vpcs_guest.svg",
                 "template_id": "19021f99-e36f-394d-b4a1-8aaa902ab9cc",
                 "width": 65,
-                "x": 172,
-                "y": -386,
+                "x": 171,
+                "y": -387,
                 "z": 1
             },
             {
@@ -1350,7 +1350,7 @@
                 "template_id": "19021f99-e36f-394d-b4a1-8aaa902ab9cc",
                 "width": 65,
                 "x": 570,
-                "y": -378,
+                "y": -379,
                 "z": 1
             },
             {
