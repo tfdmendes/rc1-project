@@ -1,9 +1,4 @@
-# This the configuration for Aquarius
-#
-# Uncomment the following line to enable DHCP
-# dhcp
-# or the line below to manually setup an IP address and subnet mask
-# ip 192.168.1.1 255.0.0.0
-#
-
 set pcname Aquarius
+ip 203.19.37.81 203.19.37.94 28
+ip 2002:a188:bc78:101:2050:79ff:fe66:680a/64
+ip dns 203.19.37.117 203.128.181.249
