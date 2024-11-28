@@ -1774,8 +1774,8 @@
                 "symbol": ":/symbols/ethernet_switch.svg",
                 "template_id": "1966b864-93e7-32d5-965f-001384eec461",
                 "width": 72,
-                "x": -13,
-                "y": 86,
+                "x": -14,
+                "y": 85,
                 "z": 1
             },
             {
@@ -1909,6 +1909,6 @@
     },
     "type": "topology",
     "variables": null,
-    "version": "2.2.45",
+    "version": "2.2.42",
     "zoom": 75
 }
