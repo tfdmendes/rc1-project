@@ -39,7 +39,7 @@ while True:
             print(f"Cliente {sender_addr_port} registado como {name}")
         continue
 
-    elif msg_decoded == "record":
+    elif msg_decoded == "leaderboard":
         all_games = dict(sorted(all_games.items(), key=lambda item: item[1]['attempts']))
         tabela = "+-----------------+-----------------+-------+-----------+\n"
         tabela += "| Username        | IP              | Port  | Attempts  |\n"
@@ -73,6 +73,17 @@ while True:
 
         msg = "Bem-Vindo ao jogo!\nTenta adivinhar um número entre 1 e 100.".encode()
         sock.sendto(msg, sender_addr_port)
+    
+    elif msg_decoded.lower() in ["help", "ajuda"]:
+        help_msg = (
+            "Comandos disponíveis:\n"
+            "\tping - Verifica a conexão com o servidor.\n"
+            "\tleaderboard - Exibe o ranking dos jogadores.\n"
+            "\tgame - Inicia um novo jogo de adivinhar o número.\n"
+            "\thelp/ajuda - Exibe esta mensagem de ajuda.\n"
+        )
+        sock.sendto(help_msg.encode(), sender_addr_port)
+        
 
     elif sender_addr_port in client_games:
         game = client_games[sender_addr_port]
@@ -93,7 +104,7 @@ while True:
                 game["attempts"] += 1
             else:
                 game["attempts"] += 1
-                msg = f"Parabéns {game["name"]}! Conseguiste acertar, com {game['attempts']} tentativa(s).\nO valor era: {game['server_choice']}.".encode()
+                msg = f"Parabéns, {game["name"]}! Acertaste, com {game['attempts']} tentativa(s).\nO valor era: {game['server_choice']}.".encode()
 
                 all_games[num_games] = {
                     "name": client_names[sender_addr_port],

@@ -44,7 +44,7 @@ while True:
             print("Nenhuma resposta do servidor.")
 
         message = input("Mensagem para enviar? ").encode()
-        if message == "exit".encode() or message == "sair".encode():
+        if message == "exit".encode() or message == "sair".encode() or message == "sair".encode():
             message = "A sair"
             for i in range(4):
                 sys.stdout.write("\r" + message + "." * i)
