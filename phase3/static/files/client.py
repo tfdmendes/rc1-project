@@ -55,5 +55,6 @@ while True:
         if len(message) > 0:
             sock.sendto(message, (ip_addr, udp_port))
 
+
     except KeyboardInterrupt:
         break
