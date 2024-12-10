@@ -57,7 +57,7 @@
                 "drawing_id": "c7831456-a527-4cdb-8a52-ad29f15adc42",
                 "locked": false,
                 "rotation": 0,
-                "svg": "<svg width=\"96\" height=\"20\"><text font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\" fill=\"#000000\" fill-opacity=\"1.0\">203.128.181.241</text></svg>",
+                "svg": "<svg width=\"96\" height=\"21\"><text font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\" fill=\"#000000\" fill-opacity=\"1.0\">203.128.181.241</text></svg>",
                 "x": 579,
                 "y": -429,
                 "z": 2
@@ -147,7 +147,7 @@
                 "drawing_id": "7dd0384a-6f04-442b-8cc3-ddc9ef7945a3",
                 "locked": false,
                 "rotation": 0,
-                "svg": "<svg width=\"97\" height=\"20\"><text font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\" fill=\"#000000\" fill-opacity=\"1.0\">203.128.181.225</text></svg>",
+                "svg": "<svg width=\"97\" height=\"21\"><text font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\" fill=\"#000000\" fill-opacity=\"1.0\">203.128.181.225</text></svg>",
                 "x": -337,
                 "y": -348,
                 "z": 2
@@ -1818,7 +1818,7 @@
                 "compute_id": "local",
                 "console": null,
                 "console_auto_start": false,
-                "console_type": null,
+                "console_type": "none",
                 "custom_adapters": [],
                 "first_port_name": null,
                 "height": 71,
@@ -1888,11 +1888,6 @@
                             "type": "ethernet"
                         },
                         {
-                            "name": "en6",
-                            "special": false,
-                            "type": "ethernet"
-                        },
-                        {
                             "name": "llw0",
                             "special": false,
                             "type": "ethernet"
@@ -1924,21 +1919,6 @@
                         },
                         {
                             "name": "utun4",
-                            "special": false,
-                            "type": "ethernet"
-                        },
-                        {
-                            "name": "utun5",
-                            "special": false,
-                            "type": "ethernet"
-                        },
-                        {
-                            "name": "utun6",
-                            "special": false,
-                            "type": "ethernet"
-                        },
-                        {
-                            "name": "utun7",
                             "special": false,
                             "type": "ethernet"
                         }
