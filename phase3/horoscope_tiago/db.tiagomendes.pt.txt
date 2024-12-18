@@ -1,0 +1,18 @@
+$TTL 604800
+$ORIGIN tiagomendes.pt.
+@       IN      SOA     ns1.tiagomendes.pt.     adm.tiagomendes.pt. (
+                        2
+                        604800
+                        86400
+                        2419200
+                        604800)
+        IN      NS      ns1.tiago.pt.
+ns1     IN      A       203.19.37.117
+@       IN      A       203.19.37.117
+www     IN      A       203.19.37.117
+siteA   IN      A       203.19.37.117
+taurus  IN      A       203.19.37.1
+leo     IN      A       203.19.37.33
+pisces  IN      A       203.19.37.65
+aquarius        IN      A       203.19.37.81
+capricornus     IN      A       203.19.37.97

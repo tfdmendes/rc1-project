@@ -1,0 +1,17 @@
+$TTL 604800
+$ORIGIN andrevasconcelos.pt.
+@	IN	SOA	ns1.andrevasconcelos.pt. adm.andrevasconcelos.pt. (
+			2
+			604800
+			86400
+			2419200
+			604800)
+	IN	NS	ns1.andrevasconcelos.pt.
+ns1	IN	A	203.128.181.249
+@	IN	A	203.128.181.249
+www	IN	A 	203.128.181.249
+siteA	IN	A	203.128.181.249
+march	IN 	A	203.128.181.225
+june	IN 	A	203.128.181.193
+september IN	A	203.128.181.129
+december  IN	A	203.128.181.241

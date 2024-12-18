@@ -1,0 +1,182 @@
+html, body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 22pt;
+}
+
+.content {
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+}
+
+#status {
+    padding: 7px 0 7px 0;
+    position: absolute;
+    height: 35px;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 0 0 15px 15px;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+.left {
+    height: 100%;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    display: flex;  
+    background-color: rgb(64, 67, 66);
+}
+
+.gameContent {
+    z-index: 1;
+    text-align: center;
+    height: 468px;
+    width: 50%;
+    border-radius: 5%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.3);
+    min-width: 250px;
+}
+
+#controls {
+    width: 80%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#error {
+    color: red;
+}
+
+#gameInfo {
+    text-align: center;
+}
+
+.gameControls {
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+input {
+    height: 20px;
+    width: 90%;
+    border: none;
+    border-radius: 6px;
+    text-align: center;
+}
+
+#controls input {
+    border: 1px solid black;
+}
+
+.gameControls input {
+    border: 1px solid black;
+}
+
+button {
+    height: 25px;
+    width: 70%;
+    border: none;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    font-size: 9pt;
+}
+
+#restart {
+    display: none;
+    position: relative;
+    top: 190px;
+}
+
+#messages {
+    margin-top: 10px;
+    overflow-y: auto;
+    text-align: center;
+}
+
+.right {
+    height: 100%;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    display: flex;  
+    background-color: white;
+}
+
+#chatArea {
+    z-index: 1;
+    text-align: center;
+    height: 468px;
+    width: 50%;
+    border-radius: 5%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(64, 67, 66);
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.3);
+    min-width: 250px;
+}
+
+#chatArea h2 {
+    color: white;
+}
+
+#chatMessages {
+    height: 65%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px 0 10px;
+    border:1px solid #ccc;
+    border-radius: 15px;
+    overflow-y: auto;
+    text-align: start;
+    margin-bottom:10px;
+}
+
+.me {
+    align-self: flex-end;
+    text-align: left;
+    word-wrap: break-word;
+    margin: 5px 0;
+}
+
+
+.chatControles {
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+@media screen and (max-width: 1536px) {
+    #restart {
+        top: 150px;
+    }
+}

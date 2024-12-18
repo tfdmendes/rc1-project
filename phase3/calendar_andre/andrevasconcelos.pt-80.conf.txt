@@ -1,0 +1,5 @@
+<VirtualHost *:80>
+	DocumentRoot /var/www/html/andrevasconcelos.pt-80/
+	ServerName andrevasconcelos.pt
+	ServerAlias www.andrevasconcelos.pt
+</VirtualHost>

@@ -1,0 +1,6 @@
+<VirtualHost *:80>
+        DocumentRoot /var/www/html/tiagomendes.pt-80/
+        ServerName tiagomendes.pt
+        ServerAlias www.tiagomendes.pt
+</VirtualHost>
+
