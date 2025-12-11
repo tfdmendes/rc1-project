@@ -1,3 +1,6 @@
+Final Grade: 21.1/20
+
+
 # TABLE OF CONTENTS
 1. **[Useful Commands](#useful-commands)**
    - [VPC](#vpc)
